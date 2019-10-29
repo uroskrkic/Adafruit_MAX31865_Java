@@ -3,16 +3,25 @@ This is the Adafruit MAX31856 Library for Raspberry Pi written in Java.
 
 <a href="https://www.adafruit.com/products/3328"><img src="assets/image.jpg" height="300"/></a>
 
-Tested and works great with the Adafruit Thermocouple Breakout w/MAX31856
-   * http://www.adafruit.com/products/3328
+Tested and works great with the Adafruit MAX31856 Amplifier with PT1000 sensor on Raspberry Pi 3 B+.
 
-These sensors use SPI to communicate, 2-4 pins are required to  
-interface
+   * <a href="http://www.adafruit.com/products/3328">http://www.adafruit.com/products/3328</a>
+   * <a href="https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/overview">https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/overview</a>
 
-Adafruit invests time and resources providing this open source code, 
-please support Adafruit and open-source hardware by purchasing 
-products from Adafruit!
+This amplifier uses SPI to communicate. 2-4 pins are required to  
+interface.
 
-Written by Uros Krkic.  
-MIT license
-All text above must be included in any redistribution.
+**Dependencies:** <a href="https://pi4j.com/1.2/index.html">https://pi4j.com/1.2/index.html</a>
+
+* Pi4J - Core
+* Pi4J - GPIO Extension
+* Pi4J - Device
+
+**Notes:**
+
+* Check class level documentation for more details and usage.
+* This is a Maven project with included Pi4J dependencies.
+
+*Written by Uros Krkic*
+
+*MIT license*
