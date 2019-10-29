@@ -1,4 +1,4 @@
-package com.appculture.adafruit.max31865;
+package com.trustysoft.adafruit.max31865;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
