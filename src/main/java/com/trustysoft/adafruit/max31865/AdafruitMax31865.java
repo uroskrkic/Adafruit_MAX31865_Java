@@ -284,10 +284,6 @@ public final class AdafruitMax31865 {
 		if (temp >= 0)
 			return temp;
 
-		// This was in C++, but seems not needed.
-//		rawReading /= rtdNominal;
-//		rawReading *= 100; // normalize to 100 Ohm
-
 		double rpoly = rawReading;
 
 		temp = -242.02;
