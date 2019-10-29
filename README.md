@@ -1,9 +1,9 @@
 # Adafruit MAX31865 Java
-This is the Adafruit MAX31856 Library for Raspberry Pi written in Java.
+This is the Adafruit MAX31865 Library for Raspberry Pi written in Java.
 
 <a href="https://www.adafruit.com/products/3328"><img src="assets/image.jpg" height="300"/></a>
 
-Tested and works great with the Adafruit MAX31856 Amplifier with PT1000 sensor on Raspberry Pi 3 B+.
+Tested and works great with the Adafruit MAX31865 Amplifier with PT1000 sensor on Raspberry Pi 3 B+.
 
    * <a href="http://www.adafruit.com/products/3328">http://www.adafruit.com/products/3328</a>
    * <a href="https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/overview">https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/overview</a>
