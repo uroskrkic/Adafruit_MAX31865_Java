@@ -8,8 +8,7 @@ Tested and works great with the Adafruit MAX31856 Amplifier with PT1000 sensor o
    * <a href="http://www.adafruit.com/products/3328">http://www.adafruit.com/products/3328</a>
    * <a href="https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/overview">https://learn.adafruit.com/adafruit-max31865-rtd-pt100-amplifier/overview</a>
 
-This amplifier uses SPI to communicate. 2-4 pins are required to  
-interface.
+This amplifier uses SPI to communicate. 2-4 pins are required to interface.
 
 **Dependencies:** <a href="https://pi4j.com/1.2/index.html">https://pi4j.com/1.2/index.html</a>
 
