@@ -18,7 +18,7 @@ This amplifier uses SPI to communicate. 2-4 pins are required to interface.
 
 **Notes:**
 
-* Check class level documentation for more details and usage.
+* Check class level documentation for more details and usage `AdafruitMax31865.java`.
 * This is a Maven project with included Pi4J dependencies.
 
 *Written by Uros Krkic*
