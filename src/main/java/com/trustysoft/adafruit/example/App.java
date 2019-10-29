@@ -7,7 +7,7 @@ public class App {
 
 	public static void main(String[] args) throws Exception {
 		
-		AdafruitMax31865 max31865 = new AdafruitMax31865(22, 12, 13, 14, Wires.TWO, 1000, 4300);
+		final AdafruitMax31865 max31865 = new AdafruitMax31865(22, 12, 13, 14, Wires.TWO, 1000, 4300);
 		
 		Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
 			@Override

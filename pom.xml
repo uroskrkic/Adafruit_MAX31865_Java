@@ -12,12 +12,6 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    	<project.internal.version>1.0</project.internal.version>
-		<project.internal.build>1</project.internal.build>
-		<project.build.finalName>${project.name}-${project.version}</project.build.finalName>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<project.build.directory>target</project.build.directory>
   </properties>
 
   <dependencies>
