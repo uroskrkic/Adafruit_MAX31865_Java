@@ -70,7 +70,7 @@ import com.pi4j.wiringpi.Gpio;
  * 
  * <br>
  * <b>Note: </b>If you want to connect multiple MAX31865's to one microcontroller, have them share the SDI, SDO and SCK pins. Then assign each one a unique CS pin.
- * <i>For instance, CS pin can be 22 (WiringPi) (31 physical pin).</i>
+ * <i>For instance, CS pin can be 10 (WiringPi) (24 physical pin).</i>
  * <br><br>
  * 
  * <b>Note:</b> Once done using the sensor, call {@link AdafruitMax31865#reset()} to reset the system to default state.
@@ -152,6 +152,8 @@ public final class AdafruitMax31865 {
 	/**
 	 * Setup RPi pins, nominal values and initialize the module.
 	 * <br><br>
+	 * <b>IMPORTANT: Use WiringPi (Pi4J) pin numbering.</b>
+	 * <br><br>
 	 * Check class level documentation for more details.
 	 * 
 	 * @param cs Chip Select pin. Drop it to low to start an SPI transaction. It's an input to the chip.
@@ -212,8 +214,32 @@ public final class AdafruitMax31865 {
 		Gpio.pinModeAlt(miso, Gpio.ALT0);
 		Gpio.digitalWrite(miso, Gpio.LOW);
 		
-		Gpio.pinMode(cs, Gpio.INPUT);
+		Gpio.pinMode(cs, Gpio.OUTPUT);
 		Gpio.digitalWrite(cs, Gpio.HIGH);
+	}
+	
+	/**
+	 * Reset PIN values and mode to system default, so other client can use the chip (sensor).
+	 * It's mandatory to call this method when stop using the sensor.
+	 * <br><br>
+	 * In compare to {@link AdafruitMax31865#reset()}, this method allows custom reset of CS (Chip Select) pin default mode and state.
+	 * <br><br>
+	 * Usually, it is {@code Gpio.OUTPUT} for mode, and {@code Gpio.HIGH} for state.
+	 * @param csDefaultMode Use {@link Gpio} constants
+	 * @param csDefaultState Use {@link Gpio} constants
+	 */
+	public void reset(int csDefaultMode, int csDefaultState) {
+		Gpio.pinModeAlt(sclk, Gpio.ALT0);
+		Gpio.digitalWrite(sclk, Gpio.LOW);
+		
+		Gpio.pinModeAlt(mosi, Gpio.ALT0);
+		Gpio.digitalWrite(mosi, Gpio.HIGH);
+		
+		Gpio.pinModeAlt(miso, Gpio.ALT0);
+		Gpio.digitalWrite(miso, Gpio.LOW);
+		
+		Gpio.pinMode(cs, csDefaultMode);
+		Gpio.digitalWrite(cs, csDefaultState);
 	}
 	
 	/**
